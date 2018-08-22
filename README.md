@@ -24,15 +24,15 @@ Paren are used for associativity.
  * ``-``
  * ``*``
  * ``/``
- * % (remainder)
- * = (assign variable)
- * \ (rounded toward 0)
- * ^ (expotential)
- * << (lshift)
+ * ``%`` (remainder)
+ * ``=`` (assign variable)
+ * ``\`` (rounded toward 0)
+ * ``^`` (expotential)
+ * ``<<`` (lshift)
  * ``>>`` (rshift)
- * &  (logand)
- * |  (logor)
- * `  (logxor)
+ * ``&``  (logand)
+ * ``|``  (logor)
+ * `` ` ``  (logxor)
 
 ## prefix
  * ``+``
@@ -43,35 +43,37 @@ Paren are used for associativity.
  * ! (factrial)
 
 ## constants
- * pi
- * e
+ * ``pi``
+ * ``e``
 
 ## functions
- * round
- * rem
- * ffloor
- * fceiling (or fceil)
- * ftruncate (or ftrunc)
- * fround
- * float
- * int
- * rational
- * complex
- * phase
- * cis
- * min
- * max
- * conjugate
- * signum
- * realpart (or real)
- * imagpart (or imag)
- * numerator (or num)
- * denominator (or den)
- * shift (or ash)
- * random (or rand)
- * fibonacci
- * fact
- * sigma
+ * ``round``
+ * ``rem``
+ * ``ffloor``
+ * ``fceiling`` (or ``fceil``)
+ * ``ftruncate`` (or ``ftrunc``)
+ * ``fround``
+ * ``float``
+ * ``int``
+ * ``rational``
+ * ``complex``
+ * ``phase``
+ * ``cis``
+ * ``min``
+ * ``max``
+ * ``conjugate``
+ * ``signum``
+ * ``realpart`` (or ``real``)
+ * ``imagpart`` (or ``imag``)
+ * ``numerator`` (or ``num``)
+ * ``denominator`` (or ``den``)
+ * ``shift`` (or ``ash``)
+ * ``random`` (or ``rand``)
+ * ``fibonacci`` (or ``fib``)
+ * ``fact``
+ * ``sigma``
+
+## set command
 
 # todo
  * define function is disabled.
