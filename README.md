@@ -20,24 +20,24 @@ Paren are used for associativity.
 
 ## infix operators
 
- * +
- * -
- * *
- * /
+ * ``+``
+ * ``-``
+ * ``*``
+ * ``/``
  * % (remainder)
  * = (assign variable)
  * \ (rounded toward 0)
  * ^ (expotential)
  * << (lshift)
- * >> (rshift)
+ * ``>>`` (rshift)
  * &  (logand)
  * |  (logor)
  * `  (logxor)
 
 ## prefix
- * +
- * -
- * ~ (lognot)
+ * ``+``
+ * ``-``
+ * ``~`` (lognot)
 
 ## suffix
  * ! (factrial)
