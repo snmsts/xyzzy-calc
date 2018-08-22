@@ -1,6 +1,6 @@
-(uiop/package:define-package :xyzzy-calc/calc (:nicknames) (:use :cl) (:shadow)
+(uiop/package:define-package :xyzzy-calc/calc (:nicknames :xyzzy-calc) (:use :cl) (:shadow)
                              (:export :calc-read-from-string :calc-eval
-                              :calc-print)
+                              :calc-print :calc)
                              (:intern))
 (in-package :xyzzy-calc/calc)
 ;;don't edit above
@@ -238,7 +238,7 @@
                    (when (or invalid-p (not (numberp tok)))
                      (error "invalid format: ~a" tok))
                    (return tok)))))
-            ((find c " \t\n\r\f"))
+            ((find c '(#\space #\newline #\Return #\Page)))
             ((or (alpha-char-p c)
                  (>= (char-code c) 127)
                  (char= c #\_))
@@ -346,7 +346,7 @@
            (pop *calc-token*)
            (let ((right (calc-assign-expr)))
              (cond ((symbolp left)
-                    `(setq ,left ,right))
+                    `(set ',left ,right))
                    #+nil((and (listp left)
                          (symbolp (car left))
                          (eq (symbol-package (car left)) *calc-package*))
@@ -459,3 +459,6 @@
                  (logbitp (- *calc-bits* 1) result))
         (setq result (- result (ash 1 *calc-bits*)))))
     (calc-print-number result o)))
+
+(defun calc (string)
+  (calc-print (calc-eval (calc-read-from-string string))))
